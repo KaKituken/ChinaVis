@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Awesome-pyecharts</title>
+            <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+
+</head>
+<body>
+    <div id="3ae1051c824442d984830420d4671ac2" class="chart-container" style="width:900px; height:500px;"></div>
+    <script>
+        var chart_3ae1051c824442d984830420d4671ac2 = echarts.init(
+            document.getElementById('3ae1051c824442d984830420d4671ac2'), 'white', {renderer: 'canvas'});
+        var option_3ae1051c824442d984830420d4671ac2 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "graph",
+            "layout": "force",
+            "symbolSize": 10,
+            "circular": {
+                "rotateLabel": false
+            },
+            "force": {
+                "repulsion": 1000,
+                "edgeLength": 50,
+                "gravity": 0.2
+            },
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            },
+            "lineStyle": {
+                "show": true,
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0,
+                "type": "solid"
+            },
+            "roam": true,
+            "draggable": false,
+            "focusNodeAdjacency": true,
+            "data": [
+                {
+                    "name": "Domain_587da0ba",
+                    "itemStyle": {
+                        "color": "#71995a"
+                    }
+                },
+                {
+                    "name": "IP_35c1f03829a1"
+                },
+                {
+                    "name": "IP_2a72acc7212c"
+                },
+                {
+                    "name": "IP_CIDR_99e0b37"
+                },
+                {
+                    "name": "Domain_7939d01c",
+                    "itemStyle": {
+                        "color": "#71995a"
+                    }
+                },
+                {
+                    "name": "IP_21ce145cae67",
+                    "itemStyle": {
+                        "color": "#71995a"
+                    }
+                },
+                {
+                    "name": "Whois_Phone_fd0",
+                    "itemStyle": {
+                        "color": "#71995a"
+                    }
+                },
+                {
+                    "name": "IP_ad953bb796bc"
+                },
+                {
+                    "name": "Domain_0309f1ab"
+                },
+                {
+                    "name": "Domain_b8e98fe2"
+                },
+                {
+                    "name": "IP_688ead9479ae"
+                },
+                {
+                    "name": "IP_2340c6a5d2bb"
+                },
+                {
+                    "name": "Cert_23bc88ac81"
+                },
+                {
+                    "name": "IP_e510542a7218"
+                },
+                {
+                    "name": "Cert_1249c50ce9"
+                },
+                {
+                    "name": "Domain_9b5fe493"
+                },
+                {
+                    "name": "Cert_2a5008ab17"
+                },
+                {
+                    "name": "Domain_34bb1f3c"
+                },
+                {
+                    "name": "Cert_8584c12c77"
+                }
+            ],
+            "edgeLabel": {
+                "show": true,
+                "position": "middle",
+                "margin": 8,
+                "formatter": "relation"
+            },
+            "edgeSymbol": [
+                null,
+                null
+            ],
+            "edgeSymbolSize": 10,
+            "links": [
+                {
+                    "source": "Domain_34bb1f3c",
+                    "target": "Whois_Phone_fd0",
+                    "value": "r_whois_phone"
+                },
+                {
+                    "source": "Domain_b8e98fe2",
+                    "target": "Whois_Phone_fd0",
+                    "value": "r_whois_phone"
+                },
+                {
+                    "source": "Domain_9b5fe493",
+                    "target": "Whois_Phone_fd0",
+                    "value": "r_whois_phone"
+                },
+                {
+                    "source": "Domain_34bb1f3c",
+                    "target": "IP_688ead9479ae",
+                    "value": "r_dns_a"
+                },
+                {
+                    "source": "Domain_34bb1f3c",
+                    "target": "Domain_7939d01c",
+                    "value": "r_request_jump"
+                },
+                {
+                    "source": "Domain_34bb1f3c",
+                    "target": "Cert_23bc88ac81",
+                    "value": "r_cert"
+                },
+                {
+                    "source": "Domain_b8e98fe2",
+                    "target": "Domain_0309f1ab",
+                    "value": "r_cname"
+                },
+                {
+                    "source": "Domain_b8e98fe2",
+                    "target": "IP_21ce145cae67",
+                    "value": "r_dns_a"
+                },
+                {
+                    "source": "Domain_7939d01c",
+                    "target": "IP_e510542a7218",
+                    "value": "r_dns_a"
+                },
+                {
+                    "source": "Domain_7939d01c",
+                    "target": "Domain_9b5fe493",
+                    "value": "r_request_jump"
+                },
+                {
+                    "source": "Domain_9b5fe493",
+                    "target": "Cert_23bc88ac81",
+                    "value": "r_cert"
+                },
+                {
+                    "source": "Domain_0309f1ab",
+                    "target": "Domain_587da0ba",
+                    "value": "r_cname"
+                },
+                {
+                    "source": "Domain_9b5fe493",
+                    "target": "IP_ad953bb796bc",
+                    "value": "r_dns_a"
+                },
+                {
+                    "source": "Domain_7939d01c",
+                    "target": "Cert_1249c50ce9",
+                    "value": "r_cert"
+                },
+                {
+                    "source": "Domain_587da0ba",
+                    "target": "IP_21ce145cae67",
+                    "value": "r_dns_a"
+                },
+                {
+                    "source": "Domain_34bb1f3c",
+                    "target": "IP_35c1f03829a1",
+                    "value": "r_dns_a"
+                },
+                {
+                    "source": "Domain_7939d01c",
+                    "target": "IP_2340c6a5d2bb",
+                    "value": "r_dns_a"
+                },
+                {
+                    "source": "Domain_7939d01c",
+                    "target": "Cert_8584c12c77",
+                    "value": "r_cert"
+                },
+                {
+                    "source": "IP_21ce145cae67",
+                    "target": "IP_CIDR_99e0b37",
+                    "value": "r_cidr"
+                },
+                {
+                    "source": "Domain_9b5fe493",
+                    "target": "IP_2a72acc7212c",
+                    "value": "r_dns_a"
+                },
+                {
+                    "source": "Domain_9b5fe493",
+                    "target": "Cert_2a5008ab17",
+                    "value": "r_cert"
+                }
+            ]
+        }
+    ],
+    "legend": [
+        {
+            "data": [],
+            "selected": {},
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5
+    },
+    "title": [
+        {
+            "text": "group-5/cores",
+            "padding": 5,
+            "itemGap": 10
+        }
+    ]
+};
+        chart_3ae1051c824442d984830420d4671ac2.setOption(option_3ae1051c824442d984830420d4671ac2);
+    </script>
+</body>
+</html>
