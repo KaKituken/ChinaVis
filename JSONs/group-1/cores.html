@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Awesome-pyecharts</title>
+            <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+
+</head>
+<body>
+    <div id="1a84ce51f7f54d25b5c4008a8be94764" class="chart-container" style="width:900px; height:500px;"></div>
+    <script>
+        var chart_1a84ce51f7f54d25b5c4008a8be94764 = echarts.init(
+            document.getElementById('1a84ce51f7f54d25b5c4008a8be94764'), 'white', {renderer: 'canvas'});
+        var option_1a84ce51f7f54d25b5c4008a8be94764 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "graph",
+            "layout": "force",
+            "symbolSize": 10,
+            "circular": {
+                "rotateLabel": false
+            },
+            "force": {
+                "repulsion": 1000,
+                "edgeLength": 50,
+                "gravity": 0.2
+            },
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            },
+            "lineStyle": {
+                "show": true,
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0,
+                "type": "solid"
+            },
+            "roam": true,
+            "draggable": false,
+            "focusNodeAdjacency": true,
+            "data": [
+                {
+                    "name": "Domain_91de9701"
+                },
+                {
+                    "name": "IP_94fb4d47d392"
+                },
+                {
+                    "name": "Cert_392d981eaf"
+                },
+                {
+                    "name": "Domain_cee489b4"
+                },
+                {
+                    "name": "Domain_f3554b66",
+                    "itemStyle": {
+                        "color": "#71995a"
+                    }
+                },
+                {
+                    "name": "Domain_c58c149e",
+                    "itemStyle": {
+                        "color": "#71995a"
+                    }
+                },
+                {
+                    "name": "IP_180ec840d57b"
+                },
+                {
+                    "name": "Cert_fe794a69ea"
+                },
+                {
+                    "name": "Whois_Name_db09"
+                },
+                {
+                    "name": "IP_e9d4d0c9b504"
+                }
+            ],
+            "edgeLabel": {
+                "show": true,
+                "position": "middle",
+                "margin": 8,
+                "formatter": "relation"
+            },
+            "edgeSymbol": [
+                null,
+                null
+            ],
+            "edgeSymbolSize": 10,
+            "links": [
+                {
+                    "source": "Domain_c58c149e",
+                    "target": "Whois_Name_db09",
+                    "value": "r_whois_name"
+                },
+                {
+                    "source": "Domain_91de9701",
+                    "target": "Whois_Name_db09",
+                    "value": "r_whois_name"
+                },
+                {
+                    "source": "Domain_cee489b4",
+                    "target": "Whois_Name_db09",
+                    "value": "r_whois_name"
+                },
+                {
+                    "source": "Domain_c58c149e",
+                    "target": "IP_94fb4d47d392",
+                    "value": "r_dns_a"
+                },
+                {
+                    "source": "Domain_c58c149e",
+                    "target": "Cert_fe794a69ea",
+                    "value": "r_cert"
+                },
+                {
+                    "source": "Domain_91de9701",
+                    "target": "Domain_cee489b4",
+                    "value": "r_subdomain"
+                },
+                {
+                    "source": "Domain_91de9701",
+                    "target": "Domain_f3554b66",
+                    "value": "r_cname"
+                },
+                {
+                    "source": "Domain_91de9701",
+                    "target": "IP_e9d4d0c9b504",
+                    "value": "r_dns_a"
+                },
+                {
+                    "source": "Domain_91de9701",
+                    "target": "Cert_392d981eaf",
+                    "value": "r_cert"
+                },
+                {
+                    "source": "Domain_cee489b4",
+                    "target": "IP_e9d4d0c9b504",
+                    "value": "r_dns_a"
+                },
+                {
+                    "source": "Domain_cee489b4",
+                    "target": "Domain_f3554b66",
+                    "value": "r_cname"
+                },
+                {
+                    "source": "Domain_cee489b4",
+                    "target": "Cert_392d981eaf",
+                    "value": "r_cert"
+                },
+                {
+                    "source": "Domain_f3554b66",
+                    "target": "IP_e9d4d0c9b504",
+                    "value": "r_dns_a"
+                },
+                {
+                    "source": "Domain_f3554b66",
+                    "target": "Cert_392d981eaf",
+                    "value": "r_cert"
+                },
+                {
+                    "source": "Domain_f3554b66",
+                    "target": "IP_180ec840d57b",
+                    "value": "r_dns_a"
+                }
+            ]
+        }
+    ],
+    "legend": [
+        {
+            "data": [],
+            "selected": {},
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5
+    },
+    "title": [
+        {
+            "text": "group-1/cores",
+            "padding": 5,
+            "itemGap": 10
+        }
+    ]
+};
+        chart_1a84ce51f7f54d25b5c4008a8be94764.setOption(option_1a84ce51f7f54d25b5c4008a8be94764);
+    </script>
+</body>
+</html>
