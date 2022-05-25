@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Awesome-pyecharts</title>
+            <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+
+</head>
+<body>
+    <div id="49fac17927f84057b6d77e200d4f5a98" class="chart-container" style="width:900px; height:500px;"></div>
+    <script>
+        var chart_49fac17927f84057b6d77e200d4f5a98 = echarts.init(
+            document.getElementById('49fac17927f84057b6d77e200d4f5a98'), 'white', {renderer: 'canvas'});
+        var option_49fac17927f84057b6d77e200d4f5a98 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "graph",
+            "layout": "force",
+            "symbolSize": 10,
+            "circular": {
+                "rotateLabel": false
+            },
+            "force": {
+                "repulsion": 1000,
+                "edgeLength": 50,
+                "gravity": 0.2
+            },
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            },
+            "lineStyle": {
+                "show": true,
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0,
+                "type": "solid"
+            },
+            "roam": true,
+            "draggable": false,
+            "focusNodeAdjacency": true,
+            "data": [
+                {
+                    "name": "Domain_6158a69c"
+                },
+                {
+                    "name": "Domain_8c9e4cea"
+                },
+                {
+                    "name": "IP_CIDR_7d85897"
+                },
+                {
+                    "name": "Domain_61c48131"
+                },
+                {
+                    "name": "Domain_9e6ee891"
+                },
+                {
+                    "name": "Domain_2bbc72fc"
+                },
+                {
+                    "name": "IP_e194cdba3af1"
+                },
+                {
+                    "name": "Domain_f4b2e3f0"
+                },
+                {
+                    "name": "Domain_48505c0c"
+                },
+                {
+                    "name": "Domain_5edc8dfd"
+                },
+                {
+                    "name": "IP_7e730b193c24",
+                    "itemStyle": {
+                        "color": "#71995a"
+                    }
+                },
+                {
+                    "name": "Domain_daf9508c"
+                },
+                {
+                    "name": "Domain_d300c4b6"
+                },
+                {
+                    "name": "Domain_fda95eb3"
+                },
+                {
+                    "name": "Domain_c33084e5"
+                },
+                {
+                    "name": "Domain_9924dbba"
+                },
+                {
+                    "name": "Cert_6724539e5c",
+                    "itemStyle": {
+                        "color": "#71995a"
+                    }
+                },
+                {
+                    "name": "Domain_226bb72f"
+                }
+            ],
+            "edgeLabel": {
+                "show": true,
+                "position": "middle",
+                "margin": 8,
+                "formatter": "relation"
+            },
+            "edgeSymbol": [
+                null,
+                null
+            ],
+            "edgeSymbolSize": 10,
+            "links": [
+                {
+                    "source": "Domain_6158a69c",
+                    "target": "Cert_6724539e5c",
+                    "value": "r_cert"
+                },
+                {
+                    "source": "Domain_d300c4b6",
+                    "target": "Cert_6724539e5c",
+                    "value": "r_cert"
+                },
+                {
+                    "source": "Domain_6158a69c",
+                    "target": "Domain_d300c4b6",
+                    "value": "r_subdomain"
+                },
+                {
+                    "source": "Domain_6158a69c",
+                    "target": "IP_7e730b193c24",
+                    "value": "r_dns_a"
+                },
+                {
+                    "source": "Domain_d300c4b6",
+                    "target": "IP_7e730b193c24",
+                    "value": "r_dns_a"
+                },
+                {
+                    "source": "IP_7e730b193c24",
+                    "target": "IP_CIDR_7d85897",
+                    "value": "r_cidr"
+                },
+                {
+                    "source": "Domain_8c9e4cea",
+                    "target": "IP_7e730b193c24",
+                    "value": "r_dns_a"
+                },
+                {
+                    "source": "Domain_48505c0c",
+                    "target": "IP_7e730b193c24",
+                    "value": "r_dns_a"
+                },
+                {
+                    "source": "Domain_9e6ee891",
+                    "target": "IP_7e730b193c24",
+                    "value": "r_dns_a"
+                },
+                {
+                    "source": "Domain_226bb72f",
+                    "target": "IP_7e730b193c24",
+                    "value": "r_dns_a"
+                },
+                {
+                    "source": "Domain_9924dbba",
+                    "target": "IP_7e730b193c24",
+                    "value": "r_dns_a"
+                },
+                {
+                    "source": "Domain_f4b2e3f0",
+                    "target": "IP_7e730b193c24",
+                    "value": "r_dns_a"
+                },
+                {
+                    "source": "Domain_61c48131",
+                    "target": "IP_7e730b193c24",
+                    "value": "r_dns_a"
+                },
+                {
+                    "source": "Domain_c33084e5",
+                    "target": "IP_7e730b193c24",
+                    "value": "r_dns_a"
+                },
+                {
+                    "source": "Domain_daf9508c",
+                    "target": "IP_7e730b193c24",
+                    "value": "r_dns_a"
+                },
+                {
+                    "source": "Domain_5edc8dfd",
+                    "target": "IP_7e730b193c24",
+                    "value": "r_dns_a"
+                },
+                {
+                    "source": "Domain_fda95eb3",
+                    "target": "IP_7e730b193c24",
+                    "value": "r_dns_a"
+                },
+                {
+                    "source": "Domain_2bbc72fc",
+                    "target": "IP_7e730b193c24",
+                    "value": "r_dns_a"
+                },
+                {
+                    "source": "Domain_61c48131",
+                    "target": "Cert_6724539e5c",
+                    "value": "r_cert"
+                },
+                {
+                    "source": "Domain_9924dbba",
+                    "target": "Cert_6724539e5c",
+                    "value": "r_cert"
+                },
+                {
+                    "source": "Domain_c33084e5",
+                    "target": "Cert_6724539e5c",
+                    "value": "r_cert"
+                },
+                {
+                    "source": "Domain_9e6ee891",
+                    "target": "Domain_48505c0c",
+                    "value": "r_subdomain"
+                },
+                {
+                    "source": "Domain_9924dbba",
+                    "target": "Domain_226bb72f",
+                    "value": "r_subdomain"
+                },
+                {
+                    "source": "Domain_8c9e4cea",
+                    "target": "Cert_6724539e5c",
+                    "value": "r_cert"
+                },
+                {
+                    "source": "Domain_61c48131",
+                    "target": "Domain_f4b2e3f0",
+                    "value": "r_subdomain"
+                },
+                {
+                    "source": "Domain_9e6ee891",
+                    "target": "Cert_6724539e5c",
+                    "value": "r_cert"
+                },
+                {
+                    "source": "Domain_f4b2e3f0",
+                    "target": "IP_e194cdba3af1",
+                    "value": "r_dns_a"
+                },
+                {
+                    "source": "Domain_daf9508c",
+                    "target": "Cert_6724539e5c",
+                    "value": "r_cert"
+                },
+                {
+                    "source": "Domain_61c48131",
+                    "target": "IP_e194cdba3af1",
+                    "value": "r_dns_a"
+                },
+                {
+                    "source": "Domain_5edc8dfd",
+                    "target": "Domain_daf9508c",
+                    "value": "r_subdomain"
+                },
+                {
+                    "source": "Domain_5edc8dfd",
+                    "target": "Cert_6724539e5c",
+                    "value": "r_cert"
+                },
+                {
+                    "source": "Domain_fda95eb3",
+                    "target": "Domain_2bbc72fc",
+                    "value": "r_subdomain"
+                },
+                {
+                    "source": "Domain_fda95eb3",
+                    "target": "Cert_6724539e5c",
+                    "value": "r_cert"
+                },
+                {
+                    "source": "Domain_2bbc72fc",
+                    "target": "Cert_6724539e5c",
+                    "value": "r_cert"
+                }
+            ]
+        }
+    ],
+    "legend": [
+        {
+            "data": [],
+            "selected": {},
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5
+    },
+    "title": [
+        {
+            "text": "group-4/cores",
+            "padding": 5,
+            "itemGap": 10
+        }
+    ]
+};
+        chart_49fac17927f84057b6d77e200d4f5a98.setOption(option_49fac17927f84057b6d77e200d4f5a98);
+    </script>
+</body>
+</html>
