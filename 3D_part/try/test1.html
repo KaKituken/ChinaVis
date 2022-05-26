@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN" style="height: 100%">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+    <script src="//unpkg.com/three"></script>
+    <script src="//unpkg.com/three-spritetext"></script>
+    <script src="../dist/3d-force-graph.js"></script> 
+    <script src="//unpkg.com/d3-dsv"></script>
+    <script src="//unpkg.com/dat.gui"></script>
+    <script src="//unpkg.com/d3-octree"></script>
+    <script src="//unpkg.com/d3-force-3d"></script>
+
+
+</head>
+
+<body>
+
+
+    <div id = "3d-graph" ></div>
+</body>
+
+
+<script>
+    const controls = { 'DAG Orientation': 'td'};
+    const gData = {
+      nodes: 
+    //   [
+    //     {"id":"4062045","user":"mbostock","description":"Force-Directed Graph"},
+    //     {"id":"1341021","user":"mbostock","description":"Force-Directed Graph"}],
+
+            [
+                {
+                    "id": "Domain_61befc70",
+                    "name":"Domain_6",
+                    "group":3,
+                },
+                {
+                    "id":"Whois_Name_db09",
+                    "name":"Name",
+                    "group":4
+                },
+                {
+                    "id":"Domain_c58c149e",
+                    "name":"Domain_c",
+                    "group":3
+                },
+                {
+                    "id":"Whois_Email_5a3",
+                    "name":"Email",
+                    "group":6
+                },
+                {
+                    "id":"Whois_Phone_f69",
+                    "name":"Phone",
+                    "group":5
+                },
+                {
+                    "id":"Cert_fe794a69ea",
+                    "name":"Cert",
+                    "group":1
+                }
+               
+            ],    
+            //   links: [{"source":"4062045","target":"1341021"}]
+            links:
+            [
+                {
+                    "source": "Domain_61befc70",
+                    "target": "Whois_Name_db09",
+                    "value": "r_whois_name"
+                },
+                {
+                    "source": "Domain_c58c149e",
+                    "target": "Whois_Name_db09",
+                    "value": "r_whois_name"
+                },
+                {
+                    "source": "Domain_61befc70",
+                    "target": "Whois_Email_5a3",
+                    "value": "r_whois_email"
+                },
+                {
+                    "source": "Domain_61befc70",
+                    "target": "Whois_Phone_f69",
+                    "value": "r_whois_phone"
+                },
+                {
+                    "source": "Domain_61befc70",
+                    "target": "Domain_c58c149e",
+                    "value": "r_cname"
+                },
+                {
+                    "source": "Domain_61befc70",
+                    "target": "Cert_fe794a69ea",
+                    "value": "r_cert"
+                }
+
+            ]
+        }
+    const colorMap = {
+        Domain: '#474B4D',
+        IP:'#D4483F',
+        Cert:'#DD7C22',
+        Whois_Email: '#858E96',
+        Whois_Name:'#858E96',
+        Whois_Phone:'#858E96',
+        IP_C:'#878C8F',
+        ASN:'#878C8F'
+    }
+    const valColorMap = {
+        r_cert: '#435059',
+        r_subdomain:'#435059',//red
+        r_request_jump:'#435059',
+        r_dns_a: '#435059',
+        r_whois_name:'#80878D',
+        r_whois_email:'#80878D',
+        r_whois_phone:'#80878D',
+        r_cert_chain:'#80878D',
+        r_cname:'#9B9B9B',
+        r_asn:'#9B9B9B',
+        r_cidr:'#9B9B9B'
+    }
+
+
+    
+    const myGraph = ForceGraph3D()
+    myGraph(document.getElementById('3d-graph'))    
+        // .jsonUrl('first.json')
+        // .jsonUrl('second.json')
+        // .jsonUrl('third.json')
+        // .jsonUrl('fourth.json')
+        .jsonUrl('fifth.json')
+        // .jsonUrl('first_expend.json')
+        // .jsonUrl('third_expend.json')
+        
+        
+
+        .backgroundColor('#DAD8DB')
+        .nodeColor(function(d) {
+            return colorMap[d.group]
+        })
+        .nodeOpacity(1)
+        .nodeLabel(d => `<span style="color: black">${d.name}</span>`)
+        // .nodeOpacity(function(d) {
+        //     return nodeOpacityMap[d.group]
+        // })
+        // .linkColor(() => 'rgb(0,11,40)')
+        .linkColor(function(d) {
+            return valColorMap[d.value]
+        })
+        // .linkAutoColorBy('value')
+        .linkThreeObjectExtend(true)
+        .linkOpacity(0.3)
+        .linkDirectionalArrowLength(3.5)
+        .linkDirectionalArrowRelPos(0.5)
+        .linkThreeObject(link => {
+          // extend link with text sprite
+          const sprite = new SpriteText(`${link.value}`);
+          sprite.color = '#737373';
+          sprite.textHeight = 3;
+          return sprite;
+        })
+
+        
+        .linkPositionUpdate((sprite, { start, end }) => {
+          const middlePos = Object.assign(...['x', 'y', 'z'].map(c => ({
+            [c]: start[c] + (end[c] - start[c]) / 2 // calc middle point
+          })));
+
+          // Position sprite
+          Object.assign(sprite.position, middlePos);
+        });
+
+    // Spread nodes a little wider
+    myGraph.d3Force('charge').strength(-100);
+
+        
+        // .enableNavigationControls(true);
+        
+
+</script>
+</html>
